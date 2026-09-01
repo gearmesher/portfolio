@@ -1,59 +1,43 @@
-Portfolio site: https://gearmesher.github.io/portfolio
+# Gerald Galdo — Portfolio
 
-<img width="1355" height="1160" alt="portfolio screenshot" src="https://github.com/user-attachments/assets/cefa675c-58e7-4fe2-8f7b-527b406747b7" />
+A static portfolio site for Gerald Galdo, Web Developer.
 
-# Gearmesher Portfolio
+Live: https://gearmesher.github.io/portfolio
 
-Welcome to my portfolio repository! This is a showcase of my work and skills as a **WordPress & Shopify developer** with experience in **custom plugins, themes, and e-commerce solutions**.
+## What's in here
 
----
+- `index.html` — home page: hero, project grid with filtering + a detail modal, contact CTA
+- `about.html` — bio, services, skills and tools
+- `plugins.html` — plugin gallery
+- `plugins/*.html` — individual plugin detail pages
+- `assets/css/style.css` — single stylesheet (design tokens + components)
+- `assets/js/main.js` — nav, scroll reveal, project filter/modal, typing effect, back-to-top
+- `assets/images/` — project screenshots, icons, profile photo, plugin thumbnails
+- `assets/files/` — downloadable CV
 
-## About Me
+## Stack
 
-I am a passionate web developer with strong expertise in:
+Plain HTML, CSS and vanilla JavaScript — no build step, no framework, no WordPress. Icons come from
+[devicon](https://devicon.dev/) and [Ionicons](https://ionic.io/ionicons) via CDN; font is
+[Poppins](https://fonts.google.com/specimen/Poppins) via Google Fonts.
 
-- **WordPress Development** – Custom themes, Elementor/Divi pages, WooCommerce integration, plugin development.
-- **Shopify Development** – Liquid customizations, theme building, Shopify apps, and e-commerce optimization.
-- **Plugin Development** – Creating custom WordPress plugins for site functionality, integrations, and performance improvements.
-- **Front-End Skills** – HTML, CSS, JavaScript, responsive design, performance optimization.
-- **Version Control** – Git/GitHub workflow for collaborative and organized development.
+## Running locally
 
-I build websites and tools that are **lightweight, scalable, and user-friendly**, using best practices and leveraging AI where appropriate to optimize workflows.
+It's a static site — open `index.html` directly, or serve the folder with any static server, e.g.:
 
----
+```
+python3 -m http.server 8000
+```
 
-## Portfolio Highlights
+## Editing content
 
-### WordPress Projects
-- **Custom WooCommerce Stores** – Fully functional online shops with optimized checkout flows.
-- **Landing Pages** – Designed for high conversions using Elementor/Divi.
-- **Custom Plugins** – Developed plugins for site-specific functionality like AJAX forms, shipping integrations, and admin enhancements.
-- **Performance & SEO** – Lightweight pages with clean code, fast loading, and SEO-friendly structures.
-
-### Shopify Projects
-- **Custom Themes & Liquid Code** – Tailored e-commerce themes that match brand guidelines.
-- **App Integration & Customization** – Extending Shopify functionalities with apps and custom scripts.
-- **Store Optimization** – Page speed improvements, responsive layouts, and user-friendly checkout processes.
-
----
-
-## Skills & Technologies
-
-| Category | Skills |
-|----------|--------|
-| CMS & E-commerce | WordPress, WooCommerce, Shopify, Liquid |
-| Development | PHP, HTML, CSS, JavaScript, jQuery |
-| Tools | Git/GitHub, Elementor, Divi, Shopify CLI |
-| Optimization | SEO best practices, page speed, responsive design |
-
----
+- Add/edit a project: copy a `<article class="project-card">` block in `index.html`, update the image,
+  title, category classes (`shopify` / `woocommerce` / `wordpress`), and the `data-*` attributes used by
+  the modal.
+- Add/edit a plugin: add a card in `plugins.html` and a matching page in `plugins/`.
+- Colors, spacing and type scale are all CSS custom properties at the top of `assets/css/style.css`.
 
 ## Contact
 
-- **Email:** [dev.gearmesher@gmail.com](mailto:dev.gearmesher@gmail.com)  
-- **Website / Portfolio:** [https://gearmesher.github.io/portfolio](https://gearmesher.github.io/portfolio)  
-- **GitHub:** [https://github.com/gearmesher](https://github.com/gearmesher)
-
----
-
-*This repository is part of my portfolio showcasing my web development expertise in WordPress, Shopify, and plugin development.*
+- Email: dev.gearmesher@gmail.com
+- GitHub: https://github.com/gearmesher
