@@ -606,6 +606,33 @@ h1, h2, h3, h4, h5, h6 {
   100% { opacity: 0; top: 16px; }
 }
 
+/* Shorter laptop screens (e.g. 1366x768, 1440x900): 100vh is too tight for
+   the hero content + scroll cue, so let the section size to its content
+   instead of forcing a full viewport height. */
+@media (max-height: 820px) and (min-width: 901px) {
+  .hero {
+    min-height: unset;
+    padding-top: calc(var(--header-h) + 64px);
+    padding-bottom: 100px;
+  }
+
+  .hero-visual {
+    width: min(260px, 24vw);
+  }
+
+  .hero-desc {
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    margin-bottom: 28px;
+  }
+
+  .scroll-cue {
+    bottom: 24px;
+  }
+}
+
 /* ---------- Contact strip (sidebar-style on wide, inline on mobile) ---------- */
 .quick-contact {
   display: flex;
